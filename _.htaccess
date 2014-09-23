@@ -1,0 +1,29 @@
+<Files .htaccess>
+	order allow,deny
+	deny from all
+</Files>
+
+# No serverinfo
+ServerSignature Off
+
+Options All -Indexes +FollowSymLinks
+
+# Using IE=edge & chrome=1 in the example
+<IfModule mod_setenvif.c>
+	<IfModule mod_headers.c>
+		BrowserMatch MSIE ie
+		Header set X-UA-Compatible "IE=edge,chrome=1" env=ie
+	</IfModule>
+</IfModule>
+<IfModule mod_headers.c>
+	Header append Vary User-Agent
+</IfModule>
+
+# Redirecting IE5/6/7/8 to a custom "upgrade page".
+RewriteEngine on
+RewriteCond %{HTTP_USER_AGENT} MSIE\ [5-8]
+# We allow IE9+ to pretend it's IE7/8 (IE7/8 + Trident/5.0) (eg F12 - dev/compat mode)
+RewriteCond %{HTTP_USER_AGENT} !(MSIE\ [7-8]).*(Trident\/5)
+RewriteCond %{REQUEST_URI} !/upgrade.php
+RewriteCond %{REQUEST_URI} !/upgrade/
+RewriteRule ^(.*)$ /upgrade.php [L]
