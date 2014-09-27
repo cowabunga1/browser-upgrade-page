@@ -24,6 +24,5 @@ RewriteEngine on
 RewriteCond %{HTTP_USER_AGENT} MSIE\ [5-8]
 # We allow IE9+ to pretend it's IE7/8 (IE7/8 + Trident/5.0) (eg F12 - dev/compat mode)
 RewriteCond %{HTTP_USER_AGENT} !(MSIE\ [7-8]).*(Trident\/5)
-RewriteCond %{REQUEST_URI} !/upgrade.php
 RewriteCond %{REQUEST_URI} !/upgrade/
-RewriteRule ^(.*)$ /upgrade.php [L]
+RewriteRule ^(.*)$ /upgrade/ [L]
