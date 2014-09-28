@@ -26,10 +26,10 @@ $text_vars = array(
 
 		<p>On this site, we support <strong>Internet Explorer %1s</strong> and above. Simply because the older versions are not following the web standard in an acceptable way. There are also security issues involved.</p>',
 
-	'intro_comment'		=> 'IE6/7/8 are really old browsers. You can see their release dates <a href="%1s" %2s title="Microsoft Product Lifecycle">here</a>. Now it is <strong>%3s</strong>.',
+	'intro_comment'		=> 'IE6/7/8 are really old browsers. You can read more about the realese dates <a href="%1s" %2s title="Microsoft Product Lifecycle">here</a>. Now it is <strong>%3s</strong>.',
 
 	'browsers'			=> 'Browsers',
-	'browsers_exp'		=> 'Here\'s a small collection of browsers your can use. All are free software. Some are better than others. Only your taste and preferences can decide which one to prefer.',
+	'browsers_exp'		=> 'Here\'s a small collection of browsers you can use. All are free software. Some are better than others. Only your taste and preferences can decide which one to prefer.',
 );
 extract($text_vars, EXTR_PREFIX_ALL, 'l');
 
