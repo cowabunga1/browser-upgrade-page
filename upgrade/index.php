@@ -3,7 +3,7 @@
  * /upgrade/index.php
  *
  * @author Eric F (iEFdev)
- * @copyright (c) 2014 Eric F
+ * @copyright (c) 2015 Eric F
  * @license MIT License (MIT)
  * @description Just a simple (friendly) way to show the visitors they have an outdated and unsupported browser.
  */
@@ -35,7 +35,7 @@ extract($text_vars, EXTR_PREFIX_ALL, 'l');
 
 $l_intro_exp = sprintf($l_intro_exp, (int) $ie_min);
 $l_intro_comment = sprintf($l_intro_comment, $ms_link, $new, $year);
-$footer = sprintf('&copy; %1s, <a href="//%2s/">%3s</a>', $year, $site, $site);
+$footer = sprintf('&copy; 2014-%1s, <a href="//%2s/">%3s</a>', $year, $site, $site);
 
 // the comment line... If you want to add a short note about each browser
 $browsers = array(

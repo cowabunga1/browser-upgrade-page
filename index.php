@@ -13,7 +13,7 @@ $text_vars = array(
 );
 extract($text_vars, EXTR_PREFIX_ALL, 'l');
 
-$footer = sprintf('&copy; %1s, <a href="//%2s/">%3s</a>', $year, $site, $site);
+$footer = sprintf('&copy; 2014-%1s, <a href="//%2s/">%3s</a>', $year, $site, $site);
 ?>
 <!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
