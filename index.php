@@ -13,7 +13,6 @@ $text_vars = array(
 );
 extract($text_vars, EXTR_PREFIX_ALL, 'l');
 
-$l_intro_exp = sprintf($l_intro_exp, (int) $ie_min);
 $footer = sprintf('&copy; %1s, <a href="//%2s/">%3s</a>', $year, $site, $site);
 ?>
 <!doctype html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
